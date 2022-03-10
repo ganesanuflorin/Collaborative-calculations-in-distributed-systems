@@ -1,0 +1,28 @@
+#Ganesanu Gigi Florin 334Ca
+---Tema 3---
+
+    In aceasta tema am inceput prin a imi alege fiecare coordonator si a 
+lucra separat cu el, mi am luat 3 if uri pentru fiecare coordonator.
+    In if ul de la coordonatorul 0, la topologie, am citit elementele 
+din clusterul 0, apoi am facut o matrice care pe linia 0 salvam elementele 
+din cluster, am trimis nr de procese si vectorul cu workerii la coordonatorii
+1 si 2 , am primit de la coordonatorii 1 si 2 nr de procese si workerii de la
+fiecare, apoi am pus in matricea de topologie workerii de la fiecare, apoi
+am trimis la fiecare worker din coordonatorul 0 nr de procese si matricea 
+cu topologia, apoi doar printez topologia. Asa fac si pentru ceilalti 
+coordonatorii.
+    In if ul in care rank ul nu e coordonator, primesc de la o sursa necunoscuta
+nr de procese 1 apoi imi scot sursa in variabila leader. Primesc nr de procese
+de la fiecare coordonator si tipologia apoi o afisez.
+    Ca sa calculez vectorul prima data l am umplut cu valorile cerute, apoi
+mi am creat vectorul de start si de end pentru fiecare worker, pentru a stii
+ce portiune are de prelucrat, am trimis vectorul intreg si dimesiunea la 
+coordonatorii 1 si 2, am creat alti 2 vectori de start si de end pentru fiecare
+cluster si i am trimis la coordonatori, apoi pentru fiecare worker din coordonatorul
+0 ii trimit bucata de prelucrat si vectorul unde sa prelucreze si dimensiunea lui.
+Primesc vectorii modificati in functie de fiecare cluster apoi modific vectorul
+original si il afisez. Asa procedez si pentru ceilalti coordonatori. 
+In workerii primesc bucata pe care trebuie sa o prelucreze si vectorul o prelucrez 
+apoi o trimit inapoi de unde a venit.
+    Eu am creat mesajele la recv deoarece este aceeasi chestie ca send si voiam sa
+ma asigur ca se primesc bine.
